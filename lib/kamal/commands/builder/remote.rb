@@ -54,7 +54,7 @@ class Kamal::Commands::Builder::Remote < Kamal::Commands::Builder::Base
     end
 
     def create_buildx
-      docker :buildx, :create, "--name", "--buildkitd-config /etc/buildkit/buildkit.toml", builder_name, remote_context_name
+      docker :buildx, :create, "--buildkitd-config /etc/buildkit/buildkit.toml", "--name", builder_name, remote_context_name
     end
 
     def remove_buildx
